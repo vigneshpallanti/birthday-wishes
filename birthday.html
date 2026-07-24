@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Special Birthday Surprise ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+overflow:hidden;
+
+background:url("https://i.ibb.co/32hqc6z/file-0000000061d8820788812bbe079c995d.png");
+background-size:cover;
+background-position:center;
+}
+
+
+body:before{
+content:"";
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.45);
+}
+
+
+.card{
+
+position:relative;
+z-index:1;
+
+width:90%;
+max-width:420px;
+
+padding:30px;
+
+border-radius:25px;
+
+background:rgba(255,255,255,0.15);
+
+backdrop-filter:blur(8px);
+
+color:white;
+
+}
+
+
+h1{
+
+font-size:36px;
+
+margin-bottom:15px;
+
+}
+
+
+p{
+
+font-size:18px;
+
+}
+
+
+#wishes{
+
+display:none;
+
+margin-top:20px;
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+
+.show{
+
+display:block!important;
+
+animation:fade 1s;
+
+}
+
+
+button{
+
+position:fixed;
+
+bottom:35px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:30px;
+
+background:#ff3366;
+
+color:white;
+
+font-size:18px;
+
+z-index:5;
+
+}
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+
+.heart{
+
+position:fixed;
+
+top:-10px;
+
+font-size:25px;
+
+animation:fall 5s linear;
+
+}
+
+
+@keyframes fall{
+
+to{
+
+transform:translateY(110vh);
+
+opacity:0;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy Birthday ❤️</h1>
+
+<p>A little surprise for someone special ✨</p>
+
+<div id="wishes"></div>
+
+</div>
+
+
+<button onclick="showWish()">
+💖 Open Surprise 💖
+</button>
+<script>
+
+function showWish(){
+
+document.getElementById("wishes").innerHTML=`
+
+❤️ Happy Birthday My Special Person ❤️<br><br>
+
+Today is not just another day...<br>
+It is the day a beautiful soul came into this world. ✨<br><br>
+
+I hope your life is always filled with endless happiness,
+success, love and unforgettable memories. 🌸<br><br>
+
+May every dream you see become a reality,
+and may every step you take lead you towards success. 🌟<br><br>
+
+Your smile has the power to make ordinary moments special.
+Always keep smiling because your happiness matters a lot. ❤️<br><br>
+
+No matter how far life takes us,
+I will always wish the best for you and your happiness. 💖<br><br>
+
+━━━━━━━━━━━━━━<br><br>
+
+💌 Heart Touching Quotes 💌<br><br>
+
+"Some people make your life beautiful just by being in it...
+You are one of those rare people." ❤️<br><br>
+
+"May your heart always be happy,
+your dreams always be big,
+and your smile never fade." ✨<br><br>
+
+"Life gives us many beautiful moments,
+but meeting special people makes those moments unforgettable." 🌹<br><br>
+
+"Always believe in yourself,
+because you are more amazing than you know." 💫<br><br>
+
+Once again...<br>
+🎂 Happy Birthday 🎂<br><br>
+
+Stay happy, stay blessed and keep shining forever. ❤️
+
+`;
+
+document.getElementById("wishes").classList.add("show");
+
+}
+
+
+// Falling hearts
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+
+setTimeout(function(){
+
+heart.remove();
+
+},5000);
+
+
+},300);
+
+
+</script>
+
+
+</body>
+</html>
